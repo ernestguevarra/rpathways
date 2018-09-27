@@ -12,4 +12,4 @@ You can install rpathways from github with:
 devtools::install_github("ernestguevarra/rpathways")
 ```
 
-## Example
+## Usage
