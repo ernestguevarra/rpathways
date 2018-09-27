@@ -9,7 +9,7 @@ You can install rpathways from github with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("ernestguevarra/rpathways")
+devtools::install_github("validmeasures/rpathways")
 ```
 
 ## Usage
