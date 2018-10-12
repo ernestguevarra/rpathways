@@ -528,5 +528,36 @@ grViz("
   [14]: 'Preventive and Promotive Health Services'
 ")
 
+#
+# DiagrammeR - Graphviz
+#
+grViz("
+  digraph impactPathway {
+
+    # a 'graph' statement
+    graph [layout = neato,
+           overlap = false,
+           fontsize = 12]
+
+    # several 'node' statements
+    node [shape = ellipse,
+          fontname = Helvetica,
+          style = filled]
+    y [label = '@@1'];
+    a [label = '@@2'];
+    b [label = '@@3'];
+    c [label = '@@4'];
+    d [label = '@@5'];
+
+    {a b c d} -> y
+  }
+
+  [1]: 'Nutrition Outcomes'
+  [2]: 'Food Security'
+  [3]: 'Healthy Environments'
+  [4]: 'Appropriate and Adequate Care Practices'
+  [5]: 'Health Services Coverage'
+")
+
 
 
