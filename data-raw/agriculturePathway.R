@@ -309,3 +309,224 @@ grViz("
   [10]: 'Non-food Expenditure'
   [11]: 'Female Energy Expenditure'
 ")
+
+
+#
+# DiagrammeR - Graphviz
+#
+grViz("
+  digraph washPathway {
+
+    # a 'graph' statement
+    graph [overlap = false,
+           fontsize = 12]
+
+    # several 'node' statements
+    node [shape = rectangle,
+          fontname = Helvetica,
+          style = filled]
+    y [label = '@@1'];
+    a [label = '@@2'];
+    b [label = '@@3'];
+    c [label = '@@4'];
+    d [label = '@@5'];
+    e [label = '@@6'];
+    f [label = '@@7'];
+    g [label = '@@8'];
+    h [label = '@@9'];
+    i [label = '@@10'];
+    j [label = '@@11'];
+    k [label = '@@12'];
+    l [label = '@@13'];
+    m [label = '@@14'];
+    n [label = '@@15'];
+    o [label = '@@16'];
+    p [label = '@@17'];
+    q [label = '@@18'];
+    r [label = '@@19'];
+    s [label = '@@20'];
+
+    {a b c g h} -> y
+    {i j} -> c
+    d -> a
+    e -> b
+    f -> b
+    k -> {g h i}
+    l -> j
+    m -> {d e f}
+    {n o p q} -> k
+    r -> {l s}
+    s -> m
+
+    subgraph {
+      rank = same; a; b;
+    }
+
+    subgraph {
+      rank = same; c; d; e; f;
+    }
+
+    subgraph {
+      rank = same; g; h; i; j;
+    }
+
+    subgraph {
+      rank = same; k; l; m;
+    }
+
+    subgraph {
+      rank = same; n; o; p; q; r; s;
+    }
+  }
+
+  [1]:  'Child Nutrition Outcomes'
+  [2]:  'Caregiving'
+  [3]:  'Food Consumption'
+  [4]:  'Anaemia'
+  [5]:  'Time'
+  [6]:  'Household Food Production'
+  [7]:  'Water Expenditure'
+  [8]:  'Diarrhoea'
+  [9]:  'Enteric Infection'
+  [10]: 'Protozoa/Helminth Infection'
+  [11]: 'Malaria'
+  [12]: 'Fecal contamination'
+  [13]: 'Standing Water'
+  [14]: 'Water Access'
+  [15]: 'Latrines'
+  [16]: 'Child faeces disposal'
+  [17]: 'Animal penning'
+  [18]: 'Septage Management'
+  [19]: 'Water Resources'
+  [20]: 'Water Supply'
+")
+
+
+
+#
+# DiagrammeR - Graphviz
+#
+grViz("
+  digraph carePathway {
+
+    # a 'graph' statement
+    graph [overlap = false,
+           fontsize = 12]
+
+    # several 'node' statements
+    node [shape = rectangle,
+          fontname = Helvetica,
+          style = filled]
+    y [label = '@@1'];
+    z [label = '@@2'];
+    a [label = '@@3'];
+    b [label = '@@4'];
+    c [label = '@@5'];
+    d [label = '@@6'];
+    e [label = '@@7'];
+    f [label = '@@8'];
+    g [label = '@@9'];
+    h [label = '@@10'];
+
+    {a b} -> y
+    {a b} -> z
+    {c d} -> a
+    {c d} -> b
+    c -> d [dir = both]
+    e -> {c d}
+    f -> d
+    g -> d
+    h -> {e f g}
+
+    subgraph {
+      rank = same; a; b;
+    }
+
+    subgraph {
+      rank = same; c; d;
+    }
+
+    subgraph {
+      rank = same; e; f; g;
+    }
+  }
+
+  [1]:  'Child Nutrition Outcomes'
+  [2]:  'Mother Nutrition Outcomes'
+  [3]:  'Incidence of Illnesses'
+  [4]:  'Prevalence of Illnesses'
+  [5]:  'Care Practices'
+  [6]:  'Utilisation of Care Services'
+  [7]:  'Knowledge of Care Practices'
+  [8]:  'Awareness and Understanding of Care Services'
+  [9]:  'Perception of Care Services'
+  [10]: 'Community and Household Norms on Care Roles and Care-seeking'
+")
+
+
+
+#
+# DiagrammeR - Graphviz
+#
+grViz("
+  digraph healthPathway {
+
+    # a 'graph' statement
+    graph [overlap = false,
+           fontsize = 12]
+
+    # several 'node' statements
+    node [shape = rectangle,
+          fontname = Helvetica,
+           style = filled]
+    y [label = '@@1'];
+    z [label = '@@2'];
+    a [label = '@@3'];
+    b [label = '@@4'];
+    c [label = '@@5'];
+    d [label = '@@6'];
+    e [label = '@@7'];
+    f [label = '@@8'];
+    g [label = '@@9'];
+    h [label = '@@10'];
+    i [label = '@@11'];
+    j [label = '@@12'];
+    k [label = '@@13'];
+    l [label = '@@14'];
+
+    {a b} -> {y z}
+    c -> {a b}
+    d -> c
+    {e f} -> d
+    g -> d
+    {h i} -> g
+    j -> g
+    {k l} -> j
+
+    subgraph {
+      rank = same; a; b;
+    }
+
+    subgraph {
+      rank = same; k; l;
+    }
+  }
+
+  [1]:  'Child Nutrition Outcomes'
+  [2]:  'Mother Nutrition Outcomes'
+  [3]:  'Incidence of Illnesses'
+  [4]:  'Prevalence of Illnesses'
+  [5]:  'Utilisation of Health Services'
+  [6]:  'Acceptability of Health Services'
+  [7]:  'Quality of Health Services'
+  [8]:  'Appropriateness of Health Services'
+  [9]:  'Accessiblity of Health Services'
+  [10]: 'Cost of Health Services'
+  [11]: 'Distance to Health Services'
+  [12]: 'Availability of Health Services'
+  [13]: 'Treatment Health Services'
+  [14]: 'Preventive and Promotive Health Services'
+")
+
+
+
